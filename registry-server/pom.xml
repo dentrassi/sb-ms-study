@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.vujade</groupId>
-	<artifactId>user-review-service</artifactId>
+	<artifactId>registry-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-review-service</name>
-	<description>Movie Review by User</description>
+	<name>registry-server</name>
+	<description>Eureka Discovery Server</description>
 
 	<properties>
 		<java.version>12</java.version>
@@ -21,14 +21,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
 		<dependency>
@@ -58,7 +52,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>		
+	</dependencyManagement>
 
 	<build>
 		<plugins>

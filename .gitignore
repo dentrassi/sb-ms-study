@@ -1,0 +1,6 @@
+
+movie-catalog-service/\.mvn/
+
+review-data-service/\.mvn/
+
+reviewer-service/\.mvn/
