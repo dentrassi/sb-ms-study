@@ -37,5 +37,27 @@ public class ReviewDataResource {
 		
 		return null;
 	}
+	
+	@RequestMapping("/movie/{movieid}")
+	public Review getReviewByMovie(@PathVariable("movieid") Integer movieId) {
+		
+		return findReviewByMovieId(movieId, reviewList);
+		
+	}
+	
+	private Review findReviewByMovieId(Integer movieId, List <Review> reviews) {
+		
+		Iterator<Review> iter = reviews.iterator();
+		
+		while (iter.hasNext()) {
+			Review review = iter.next();
+			if (review.getMovieId().equals(movieId)) {
+				return review;
+			}
+		}
+		
+		return null;
+	}
+
 
 }

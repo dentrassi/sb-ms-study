@@ -1,4 +1,4 @@
-package co.vujade.moviereviewservice.models;
+package co.vujade.userreviewservice.models;
 
 public class Review {
 	private Integer movieId;

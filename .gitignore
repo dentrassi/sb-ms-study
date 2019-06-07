@@ -4,3 +4,11 @@ movie-catalog-service/\.mvn/
 review-data-service/\.mvn/
 
 reviewer-service/\.mvn/
+
+movie-review-service/\.mvn/
+
+registry-server/\.mvn/
+
+movie-review-service/
+
+user-review-service/\.mvn/

@@ -1,4 +1,4 @@
-package co.vujade.moviereviewservice.models;
+package co.vujade.userreviewservice.models;
 
 import java.util.HashMap;
 import java.util.Map;

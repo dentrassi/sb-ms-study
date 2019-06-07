@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.vujade</groupId>
-	<artifactId>user-review-service</artifactId>
+	<artifactId>reviewer-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-review-service</name>
-	<description>Movie Review by User</description>
+	<name>reviewer-service</name>
+	<description>Info on reviewers</description>
 
 	<properties>
 		<java.version>12</java.version>

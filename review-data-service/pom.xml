@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>co.vujade</groupId>
-	<artifactId>movie-review-service</artifactId>
+	<artifactId>review-data-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>movie-review-service</name>
+	<name>review-data-service</name>
 	<description>Movie Info + User Review</description>
 
 	<properties>
