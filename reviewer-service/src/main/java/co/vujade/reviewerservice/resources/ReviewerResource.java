@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import co.vujade.reviewerservice.models.Data;
 import co.vujade.reviewerservice.models.UserData;
 
 @RestController
@@ -37,12 +39,33 @@ public class ReviewerResource {
 	
 	@RequestMapping("/reviewers/{reviewerId}") public UserData getUser(@PathVariable("reviewerId") String id) {
 	
-		  UserData reviewer = restTemplate.getForObject( 
-				  							REQRES_BASE_URL + "users/" +
-				  							id, 
-				  							UserData.class);
+		  UserData reviewer;
+		try {
+			reviewer = restTemplate.getForObject( 
+					  							REQRES_BASE_URL + "users/" +
+					  							id, 
+					  							UserData.class);
+		} catch (RestClientException e) {
+			e.printStackTrace();
+			return emptyUser(id);
+		}
 	  
 	  
 		  return reviewer; 
 	  }
+
+	private UserData emptyUser(String id) {
+		
+		UserData user = new UserData();
+		Data d = new Data();
+		
+		d.setId(Integer.valueOf(id));
+		d.setFirstName("Not");
+		d.setLastName("Found");
+		d.setEmail("usernotfound@reqres.in");
+		
+		user.setData(d);
+		
+		return user;
+	}
 }

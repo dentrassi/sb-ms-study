@@ -1,8 +1,5 @@
 package co.vujade.reviewdataservice;
 
-import co.vujade.reviewdataservice.models.Review;
-
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -16,6 +13,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+
+import co.vujade.reviewdataservice.models.Review;
 
 @SpringBootApplication
 public class ReviewDataServiceApplication {

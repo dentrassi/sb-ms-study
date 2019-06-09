@@ -1,51 +1,55 @@
 package co.vujade.userreviewservice.models;
 
+import java.util.List;
 
-public class UserReview {
-
+public class UserReviews {
+	
 	private Integer reviewerId;
 	private String email;
 	private String name;
 	
-	private Integer movieId;
+	private Integer totalReviews;
 	
-	private Integer rating;
-	private String review;
-	
+	private List<MovieReview> movieReviews;
+
 	public Integer getReviewerId() {
 		return reviewerId;
 	}
+
 	public void setReviewerId(Integer reviewerId) {
 		this.reviewerId = reviewerId;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getMovieId() {
-		return movieId;
+
+	public Integer getTotalReviews() {
+		return totalReviews;
 	}
-	public void setMovieId(Integer movieId) {
-		this.movieId = movieId;
+
+	public void setTotalReviews(Integer totalReviews) {
+		this.totalReviews = totalReviews;
 	}
-	public Integer getRating() {
-		return rating;
+
+	public List<MovieReview> getMovieReviews() {
+		return movieReviews;
 	}
-	public void setRating(Integer rating) {
-		this.rating = rating;
+
+	public void setMovieReviews(List<MovieReview> movieReviews) {
+		this.movieReviews = movieReviews;
 	}
-	public String getReview() {
-		return review;
-	}
-	public void setReview(String review) {
-		this.review = review;
-	}
+
 }
